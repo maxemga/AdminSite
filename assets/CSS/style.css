@@ -61,5 +61,182 @@ header {
 
 /* */
 /* MENU */
+.menuBlock {
+  position: fixed;
+  top: 0;
+  background-color: #1B2133;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 3;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.menuBlock::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.menuLogo {
+  position: relative;
+  right: 40px;
+  right: 40px;
+  padding-left: 40px;
+  width: 150%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #0C1224;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuLogo a {
+  font-size: 35px;
+  color: #E4EBF7;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+}
+
+.burger {
+  position: relative;
+  left: 40px;
+  height: 50px;
+  width: 50px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.burgerLine,
+.burgerLine::before,
+.burgerLine::after {
+  position: absolute;
+  background-color: #E4EBF7;
+  height: 2px;
+  width: 40px;
+}
+
+.burgerLine {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.burgerLine::before {
+  content: '';
+  top: 12px;
+}
+
+.burgerLine::after {
+  content: '';
+  top: -12px;
+}
+
+.menuAccount {
+  position: relative;
+  right: 40px;
+  right: 40px;
+  padding-left: 40px;
+  width: 150%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuAccount p {
+  color: #E4EBF7;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 28px;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.menuContentTopList, .menuContentBottomList {
+  position: relative;
+  right: 40px;
+  right: 40px;
+  padding-left: 40px;
+  width: 150%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid #0C1224;
+}
+
+.menuContentTopList p, .menuContentBottomList p {
+  font-family: "Noto Sans", sans-serif;
+  color: #515974;
+  font-size: 20px;
+}
+
+.menuArrow {
+  position: relative;
+  left: 240px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.arrow,
+.arrow::after,
+.arrow::before {
+  position: absolute;
+  background-color: #515974;
+  width: 14px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+.arrow {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.arrow::before {
+  content: '';
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -4.5px;
+}
+
+.arrow::after {
+  content: '';
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 4.5px;
+}
+
+.menuTopContainer {
+  position: relative;
+  right: 40px;
+  right: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 40px;
+  width: 150%;
+}
+
+.menuTopContainer:hover {
+  background-color: #0C1224;
+  border-left: 3px solid #F45B63;
+}
+
+.menuTopContainer a {
+  margin-left: 20px;
+  margin-bottom: 3px;
+  color: #E4EBF7;
+  font-size: 26px;
+  font-family: "Noto Sans", sans-serif;
+}
+
 /* */
 /*# sourceMappingURL=style.css.map */
