@@ -219,6 +219,34 @@ header {
         font-family: $noto;
     }
 }
+%menuContentHidden {
+    transition: 1s;
+    max-height: 0px;
+    overflow: hidden;
+    position: relative;
+    right: 40px;
+    right: 40px;
+    padding-left: 40px;
+    width: 120%;
+}
+%menuContentShow {
+    max-height: 700px;
+    transition: 1s;
+}
+.menuContentTopNav {
+    @extend %menuContentHidden;
+    &.active {
+        @extend %menuContentShow;
+    }
+}
+.menuContentBottomNav {
+    @extend %menuContentHidden; 
+    border-bottom: 1px solid $colorMenuLine;
+    &.active {
+        @extend %menuContentShow;
+    }
+}
+
 
 
 /* */
