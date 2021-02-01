@@ -51,7 +51,6 @@ header {
 }
 
 .headerIcons {
-  margin-right: 50px;
   cursor: pointer;
 }
 
@@ -70,6 +69,8 @@ header {
   z-index: 3;
   overflow-y: scroll;
   height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .menuBlock::-webkit-scrollbar {
@@ -250,7 +251,7 @@ header {
   width: 120%;
 }
 
-.menuContentTopNav.active, .menuContentBottomNav.active {
+.menuContentTopNav.active {
   max-height: 700px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -260,5 +261,220 @@ header {
   border-bottom: 1px solid #0C1224;
 }
 
+.menuContentBottomNav.active {
+  max-height: 700px;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+/* */
+/* MAIN */
+.projectsBlock, .teamBlock, .activityBlock, .visitsBlock, .messagesBlock, .implementationBlock, .clientActivityBlock, .mailBlock {
+  background-color: #F2F6FC;
+  border-bottom: 1px solid #DBE2ED;
+  border-left: 1px solid #DBE2ED;
+  border-right: 1px solid #DBE2ED;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.mainWrapper {
+  margin: 0 auto;
+  width: 1800px;
+}
+
+.mainContent {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.projectsBlock {
+  background-color: #F2F6FC;
+  margin-top: 10px;
+}
+
+.mainContent div:nth-child(1) {
+  grid-column: 1 / -1;
+}
+
+.projectTitle p {
+  color: #515974;
+  font-size: 24px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: bold;
+}
+
+.projectCollapse {
+  height: 3px;
+  width: 20px;
+  background-color: #A5A6BB;
+  cursor: pointer;
+}
+
+.projectTitle {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E1E7F0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projectButtons {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+/* PROJECT */
+.projectWrapper {
+  margin: 0 auto;
+  width: 1725px;
+}
+
+.projectOff {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.projectContentTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+.projectContentTop > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projectContentTop > div:nth-child(5) {
+  margin-left: auto;
+}
+
+.projectContentTop > div:nth-child(4) {
+  background-color: #F45B63;
+  border-color: #F45B63;
+}
+
+.projectContentTop p {
+  color: #515974;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* OffButton */
+.OffLine,
+.OffLine::after,
+.OffLine::before {
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background-color: #A5A6BB;
+  cursor: pointer;
+}
+
+.OffLine {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.OffLine::before {
+  content: '';
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.OffLine::after {
+  content: '';
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* */
+.projectContentTopBlock {
+  padding: 10px 25px;
+  border: 2px solid #A5A6BB;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.projectContentTopBlock:hover {
+  background-color: #54A6DE;
+  border-color: #54A6DE;
+}
+
+.projectContentTopBlock:hover p {
+  color: #E4EBF7;
+}
+
+.projectContentTopBlock:hover .arrowProject::before {
+  background-color: #E4EBF7;
+}
+
+.projectContentTopBlock:hover .arrowProject::after {
+  background-color: #E4EBF7;
+}
+
+.contentTopArrow {
+  height: 30px;
+  width: 30px;
+  position: relative;
+}
+
+.arrowProject,
+.arrowProject::before,
+.arrowProject::after {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: #515974;
+  border-radius: 15px;
+}
+
+.arrowProject {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+
+.arrowProject::after {
+  content: '';
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -4px;
+}
+
+.arrowProject::before {
+  content: '';
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 4px;
+}
+
+/* */
 /* */
 /*# sourceMappingURL=style.css.map */

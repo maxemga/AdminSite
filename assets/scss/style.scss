@@ -11,7 +11,7 @@ a {
 }
 
 $blocksColor: #F2F6FC;
-$blocksBorderColor: #CBD1DC;
+$blocksBorderColor: #DBE2ED;
 
 $noto: 'Noto Sans', sans-serif;
 $colorText: #515974;
@@ -23,7 +23,7 @@ $colorMenuLine: #0C1224;
 
 header {
     background-color: $blocksColor;
-    border-bottom: 1px solid $blocksBorderColor;
+    border-bottom: 1px solid #CBD1DC;
 
 }
 .headerWrapper {
@@ -52,7 +52,6 @@ header {
     }
 }
 .headerIcons {
-    margin-right: 50px;
     img {
         margin-left: 20px;
     }
@@ -70,6 +69,7 @@ header {
     z-index: 3;
     overflow-y: scroll;
     height: 100%;
+    transform: translateX(-100%);
 }
 .menuBlock::-webkit-scrollbar { 
     width: 0;
@@ -229,24 +229,234 @@ header {
     padding-left: 40px;
     width: 120%;
 }
-%menuContentShow {
-    max-height: 700px;
-    transition: 1s;
-}
+
 .menuContentTopNav {
     @extend %menuContentHidden;
     &.active {
-        @extend %menuContentShow;
+        max-height: 700px;
+        transition: 1s;
     }
 }
 .menuContentBottomNav {
     @extend %menuContentHidden; 
     border-bottom: 1px solid $colorMenuLine;
     &.active {
-        @extend %menuContentShow;
+        max-height: 700px;
+        transition: 1.5s;
     }
+}
+/* */
+
+/* MAIN */
+%mainBlocks {
+    background-color: $blocksColor;
+    border-bottom: 1px solid $blocksBorderColor;
+    border-left: 1px solid $blocksBorderColor;
+    border-right: 1px solid $blocksBorderColor;
+}
+
+.projectsBlock {
+    @extend %mainBlocks;
+}
+.teamBlock {
+    @extend %mainBlocks;
+}
+.activityBlock {
+    @extend %mainBlocks;
+}
+.visitsBlock {
+    @extend %mainBlocks;
+}
+.messagesBlock {
+    @extend %mainBlocks;
+}
+.implementationBlock {
+    @extend %mainBlocks;
+}
+.clientActivityBlock {
+    @extend %mainBlocks;
+}
+.mailBlock {
+    @extend %mainBlocks;
+}
+main {
+    height: 100%;
+    width: 100%;
+}
+.mainWrapper {
+    margin: 0 auto;
+    width: 1800px;
+}
+.mainContent {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.projectsBlock {
+    
+    background-color: $blocksColor;
+    margin-top: 10px;
+}
+.mainContent div:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+%mainTextTitle {
+    color: $colorText;
+    font-size: 24px;
+    font-family: $noto;
+    font-weight: bold;
+}
+%mainTitleCollapse {
+    height: 3px;
+    width: 20px;
+    background-color: #A5A6BB;
+    cursor: pointer;
+}
+@mixin TitleOff {
+.OffLine,
+.OffLine::after,
+.OffLine::before {
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background-color: #A5A6BB;
+    cursor: pointer;
+}
+.OffLine {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    &::before {
+        content: '';
+        transform: rotate(45deg);
+    }
+    &::after {
+        content: '';
+        transform: rotate(-45deg);
+    }
+}
+}
+
+$colorBorderTitle: #E1E7F0;
+
+%mainTitle {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $colorBorderTitle;
+    display: flex;
+    justify-content: space-between;
+}
+%mainTitleFlex {
+    align-items: center;
+    display: flex;
+    column-gap: 10px;
+}
+
+/* PROJECT */
+
+.projectWrapper {
+    margin: 0 auto;
+    width: 1725px;
+}
+.projectTitle {
+    @extend %mainTitle;
+    p {
+        @extend %mainTextTitle;
+    }
+}
+.projectButtons {
+    @extend %mainTitleFlex;
+}
+.projectCollapse {
+    @extend %mainTitleCollapse;
+}
+.projectOff {
+    position: relative;
+    height: 30px;
+    width: 30px;  
+}
+
+.projectContentTop {
+    display: flex;
+    column-gap: 30px;
+    &>div {
+        display: flex
+    }
+    &>div:nth-child(5) {
+        margin-left: auto;
+    }
+    &>div:nth-child(4) {
+        background-color: #F45B63;
+        border-color: #F45B63;
+    }
+    p {
+        color: $colorText;
+        font-size: 20px;
+        font-family: $noto
+    }   
+}
+
+/* OffButton */
+@include TitleOff;
+
+/* */
+
+.projectContentTopBlock {
+    padding: 10px 25px;
+    border: 2px solid #A5A6BB;
+    border-radius: 35px;
+    cursor: pointer;
+    &:hover {
+        background-color: #54A6DE;
+        border-color: #54A6DE;
+    }
+    &:hover p {
+        color: #E4EBF7;
+    }
+    &:hover .arrowProject::before {
+        background-color: #E4EBF7;
+    }
+    &:hover .arrowProject::after {
+        background-color: #E4EBF7;
+    }
+}
+
+.contentTopArrow {
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+.arrowProject, 
+.arrowProject::before, 
+.arrowProject::after {
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #515974;
+    border-radius: 15px;
+}
+.arrowProject {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+.arrowProject::after {
+    content: '';
+    transform: rotate(45deg);
+    left: -4px;
+}
+.arrowProject::before {
+    content: '';
+    transform: rotate(-45deg);
+    left: 4px;
 }
 
 
 
 /* */
+
+/* */
+
