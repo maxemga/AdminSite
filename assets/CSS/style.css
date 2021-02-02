@@ -59,6 +59,263 @@ header {
 }
 
 /* */
+/* MODAL WINDOW */
+.modalWindow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 50px 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#565C7C), color-stop(#464D70), to(#333B62));
+  background: linear-gradient(#565C7C, #464D70, #333B62);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.windowSign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  margin-left: 20px;
+}
+
+.windowSign p {
+  font-size: 22px;
+  font-family: "Noto Sans", sans-serif;
+  cursor: pointer;
+}
+
+.signInText {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.signUpText {
+  color: #868AA1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.signInText.active {
+  color: #868AA1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.signUpText.active {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.signIn {
+  text-align: center;
+}
+
+.signInBlock {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #1059FF;
+  margin-top: 40px;
+}
+
+.signInBlock a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.signForrgotLine {
+  height: 1px;
+  width: 100%;
+  background-color: #737893;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.password {
+  text-align: center;
+}
+
+.password a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #6F7690;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.windowForm {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.windowForm label {
+  display: block;
+  color: #B9BCC9;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.windowForm input {
+  outline: none;
+  border-radius: 25px;
+  background-color: #6E7490;
+  width: 320px;
+  height: 40px;
+  border: none;
+  text-align: left;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.signInLine {
+  height: 2px;
+  width: 100%;
+  background-color: #1059FF;
+  position: relative;
+  top: 13px;
+  opacity: 1;
+  -webkit-transition: opacity .0s ease, top .2s ease;
+  transition: opacity .0s ease, top .2s ease;
+}
+
+.signInLine.lineActive {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0s ease, top .1s ease;
+  transition: opacity 0s ease, top .1s ease;
+}
+
+.signUpLine {
+  height: 2px;
+  width: 100%;
+  background-color: #1059FF;
+  position: relative;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: opacity .0s ease, top .2s ease;
+  transition: opacity .0s ease, top .2s ease;
+}
+
+.signUpLine.lineActive {
+  top: 13px;
+  opacity: 1;
+  -webkit-transition: opacity .0s ease, top .2s ease;
+  transition: opacity .0s ease, top .2s ease;
+}
+
+.windowForm {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.windowForm.left {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.windowForm1 {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.windowForm1.formActive {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.windowForm2 {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.windowForm2.formActive {
+  position: relative;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.signUpBlock {
+  margin-bottom: 25px;
+}
+
+/* ON OFF */
+.windowSignInSwitcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 35px;
+  border-radius: 30px;
+  margin: 25px 0;
+}
+
+.windowSignInSwitcher input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 80px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: #656B89;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+}
+
+.windowSignInSwitcher input:before, .windowSignInSwitcher input:after {
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.windowSignInSwitcher input:before {
+  content: 'YES';
+  left: 10px;
+}
+
+.windowSignInSwitcher input:after {
+  content: 'NO';
+  right: 10px;
+}
+
+/* */
+/* */
 /* MENU */
 .menuBlock {
   position: fixed;

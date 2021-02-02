@@ -68,6 +68,64 @@
             </div>
         </div>
     </header>
+    <div class="modalOverlay">
+        <div class="modalWindow">
+            <div class="windowSign">
+                <div class="signIn"> <p class="signInText" id="signIn">SIGN IN</p> <div class="signInLine" id="signInLine"></div> </div>
+                <div class="signUp"> <p class="signUpText" id="signUp">SIGN UP</p> <div class="signUpLine" id="signUpLine"></div> </div>
+            </div>
+            <div class="windowForm" id="windowForm">
+                <div class="windowForm1" id="windowForm1">
+                    <form action="" class="formSignIn" id="form">
+                        <div class="windowSignIn">
+                            <label for="username">USERNAME</label>
+                            <input type="text" name="username">
+                        </div>
+                        <div class="windowSignIn">
+                            <label for="password">PASSWORD</label>
+                            <input type="text" name="password">
+                        </div>
+                        <!-- <div class="windowSignIn windowSignInSwitcher">
+                            <input type="checkbox" class="switcher">
+                            <label for="switcher"> </label>
+                            <a href="">KEEP ME SIGNED IN</a>
+                        </div> -->
+                        <div class="windowSignIn signIn">
+                            <div class="signInBlock"> <a href=""> SIGN IN </a> </div>
+                            <div class="signForrgotLine"></div>
+                            
+                        </div>
+                        <div class="windowSignIn password">
+                            <a href=""> Forgot your password? </a>                    
+                        </div>
+                    </form>
+                </div>
+                <div class="windowForm2" id="windowForm2">
+                    <form action="" class="formSignUp">
+                        <div class="windowSignIn">
+                            <label for="password">FULL NAME</label>
+                            <input type="text" name="password">
+                        </div>
+                        <div class="windowSignIn">
+                            <label for="password">EMAIL</label>
+                            <input type="text" name="password">
+                        </div>
+                        <div class="windowSignIn">
+                            <label for="password">PASSWORD</label>
+                            <input type="text" name="password">
+                        </div>
+                        <div class="windowSignIn">
+                            <label for="password">CONFIRM PASSWORD</label>
+                            <input type="text" name="password">
+                        </div>
+                        <div class="windowSignIn signIn">
+                            <div class="signInBlock signUpBlock"> <a href=""> SIGN IN </a> </div>    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="mainWrapper">
             <div class="mainContent">
@@ -134,5 +192,6 @@
         </div>
     </main>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 </html>
