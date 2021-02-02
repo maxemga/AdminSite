@@ -60,17 +60,48 @@ header {
 
 /* */
 /* MODAL WINDOW */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0;
+  -webkit-transition: z-index 0s ease, opacity 0.5s ease;
+  transition: z-index 0s ease, opacity 0.5s ease;
+  z-index: -1;
+}
+
+.modalOverlay.activeOverlay {
+  display: block;
+  opacity: 0.7;
+  z-index: 1;
+  -webkit-transition: display 0s ease, opacity 0.5s ease;
+  transition: display 0s ease, opacity 0.5s ease;
+}
+
 .modalWindow {
   position: fixed;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -250%);
+          transform: translate(-50%, -250%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   padding: 50px 40px;
   background: -webkit-gradient(linear, left top, left bottom, from(#565C7C), color-stop(#464D70), to(#333B62));
   background: linear-gradient(#565C7C, #464D70, #333B62);
   border-radius: 10px;
   overflow: hidden;
+  z-index: 10;
+}
+
+.modalWindow.activeWindow {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .windowSign {
